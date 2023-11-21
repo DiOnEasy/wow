@@ -144,6 +144,9 @@ body {
 }
 
 @media (max-width:768px) {
+    .quiz-wrapper{
+        padding-top: 25px;
+    }
     .quiz__item {
         min-width: 0;
         width: 90%;
