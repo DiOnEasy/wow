@@ -146,6 +146,7 @@ body {
 @media (max-width:768px) {
     .quiz-wrapper{
         padding-top: 25px;
+        height: calc(100vh - 25px);
     }
     .quiz__item {
         min-width: 0;
