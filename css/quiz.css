@@ -6,7 +6,7 @@ body * {
     margin: 0;
 }
 
-body{
+body {
     overflow: hidden;
 }
 
@@ -15,7 +15,7 @@ body{
     width: 100%;
     background: #2B0444;
     padding-top: 100px;
-overflow: hidden;
+    overflow: hidden;
     position: relative;
 }
 
@@ -68,10 +68,11 @@ overflow: hidden;
     border-radius: 1000px;
     font-size: 24px;
     font-family: 'Roboto', sans-serif;
-color: white;
+    color: white;
     padding: 20px 60px;
 }
-.quiz__form form .quiz__input::placeholder{
+
+.quiz__form form .quiz__input::placeholder {
     color: white;
 }
 
@@ -100,9 +101,10 @@ color: white;
     height: 700px;
     width: 700px;
     border-radius: 50%;
-    top:-300px;
+    top: -300px;
     right: -400px;
 }
+
 .quiz-wrapper::before {
     z-index: 100;
     content: '';
@@ -112,19 +114,19 @@ color: white;
     height: 700px;
     width: 700px;
     border-radius: 50%;
-    bottom:-300px;
+    bottom: -300px;
     left: -400px;
 }
 
-.item__none{
+.item__none {
     display: none;
 }
 
-.quiz-item:nth-child(n+1) button{
-background: transparent;
+.quiz-item:nth-child(n+1) button {
+    background: transparent;
 }
 
-.quiz__button{
+.quiz__button {
     width: 100%;
     border: none;
     padding: 20px 0;
@@ -136,14 +138,23 @@ background: transparent;
     border: 1px solid #D707AC;
 }
 
-.quiz__button:hover{
+.quiz__button:hover {
     cursor: pointer;
     background: #D707AC;
 }
 
 @media (max-width:768px) {
-    .quiz__item{
+    .quiz__item {
         min-width: 0;
+        width: 90%;
+    }
+
+    .quiz__form form .quiz__input {
+        padding: 10px 30px;
+    }
+
+    .quiz__form form .quiz__form-submit {
+        padding: 10px 0;
         width: 90%;
     }
 }
