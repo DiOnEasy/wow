@@ -1,0 +1,214 @@
+.blog {
+	padding-top: 88px;
+	background: rgb(44,4,68);
+	background: -moz-linear-gradient(left, rgba(44,4,68,1) 0%, rgba(58,6,69,1) 50%, rgba(44,4,68,1) 100%);
+	background: -webkit-linear-gradient(left, rgba(44,4,68,1) 0%,rgba(58,6,69,1) 50%,rgba(44,4,68,1) 100%);
+	background: linear-gradient(to right, rgba(44,4,68,1) 0%,rgba(58,6,69,1) 50%,rgba(44,4,68,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2c0444', endColorstr='#2c0444',GradientType=1 );
+}
+.news .container .news__content .news__single .news__text h2 a {
+	color: #fff;
+	margin-top: 0;
+}
+.news .container .news__content .news__single .photo {
+	
+}
+.news .container .news__content .news__single .photo a {
+	line-height: 0;
+	display: inline-block;
+	height: 250px;
+}
+.news .container .news__content .news__single .photo img {
+	object-fit: cover;
+}
+.article {
+	min-height: 100vh;
+	padding-bottom: 150px;
+	font-family: TT Norms, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+	color: #fff;
+	background: rgb(44,4,68);
+	background: -moz-linear-gradient(left, rgba(44,4,68,1) 0%, rgba(58,6,69,1) 50%, rgba(44,4,68,1) 100%);
+	background: -webkit-linear-gradient(left, rgba(44,4,68,1) 0%,rgba(58,6,69,1) 50%,rgba(44,4,68,1) 100%);
+	background: linear-gradient(to right, rgba(44,4,68,1) 0%,rgba(58,6,69,1) 50%,rgba(44,4,68,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2c0444', endColorstr='#2c0444',GradientType=1 );
+}
+.wrapper {
+	max-width: 1170px;
+	margin: 0 auto;
+}
+.article-title h1 {
+	max-width: 600px;
+	font-family: Tenor Sans, sans-serif;
+	font-style: normal;
+    font-weight: normal;
+	font-size: 40px;
+}
+.article-title {
+	padding-top: 88px;
+	position: relative;
+	min-height: 400px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 50% 0;
+	margin-bottom: 40px;
+	display: flex;
+	align-items: center;
+}
+.article-title:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	opacity: .7;
+	background: rgb(44,4,68);
+	background: -moz-linear-gradient(left, rgba(44,4,68,1) 0%, rgba(58,6,69,1) 50%, rgba(44,4,68,1) 100%);
+	background: -webkit-linear-gradient(left, rgba(44,4,68,1) 0%,rgba(58,6,69,1) 50%,rgba(44,4,68,1) 100%);
+	background: linear-gradient(to right, rgba(44,4,68,1) 0%,rgba(58,6,69,1) 50%,rgba(44,4,68,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2c0444', endColorstr='#2c0444',GradientType=1 );
+}
+.article-title .wrapper {
+	position: relative;
+	z-index: 10;
+	width: 100%;
+}
+.breadcrumbs {
+	margin-bottom: 40px;
+	font-family: TT Norms, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+	color: #fff;
+}
+.breadcrumbs a {
+	color: #fff;
+	text-decoration: underline;
+}
+.breadcrumbs a:hover {
+	text-decoration: none;
+}
+.breadcrumbs span {
+	color: #fff;
+}
+.article-text {
+	max-width: 900px;
+	margin: 0 auto;
+}
+.article-text h2 {
+	font-size: 30px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+.article-text {
+	line-height: 1.7;
+}
+.article-text img {
+	max-width: 100%;
+	height: auto;
+}
+.article-text ul,
+.article-text ol,
+.article-text p {
+	margin-bottom: 20px;
+}
+.article-text ul,
+.article-text ol {
+	margin-left: 20px;
+}
+.article-text a {
+	text-decoration: underline;
+}
+.article-text a:hover {
+	text-decoration: none;
+}
+.pagination {
+	margin-top: 50px;
+}
+.wp-pagenavi .pages {
+	display: none;
+}
+.wp-pagenavi {
+	text-align: center;
+}
+.wp-pagenavi span.current {
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	line-height: 38px;
+	font-family: TT Norms, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+	border: 1px solid #C7144C !important;
+	color: #C7144C !important;
+	padding: 0 !important;
+	margin: 0 3px !important;
+	border-radius: 3px;
+}
+.wp-pagenavi a {
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	line-height: 38px;
+	font-family: TT Norms, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+	background: #C7144C;
+	border: 1px solid #C7144C !important;
+	color: #fff !important;
+	padding: 0 !important;
+	margin: 0 3px !important;
+	border-radius: 3px;
+	transition: .2s;
+}
+.wp-pagenavi a:hover {
+	background: none;
+	color: #C7144C !important;
+}
+.faq-item {
+	
+}
+.ask .container .ask__content .ask__right {
+	max-width: 617px;
+}
+.ask-answer {
+	font-family: TT Norms, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 30px;
+    color: #FFFFFF;
+	padding-bottom: 20px;
+	display: none;
+}
+input.error {
+	border-bottom: 1px solid #f00 !important;
+}
+
+.contact__links{
+	display: flex;
+	column-gap: 10px;
+}
+
+.contact__links a {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	color: white;
+}
+
+@media (max-width: 1200px) {
+	.wrapper {
+		padding: 0 20px;
+	}
+}
+@media (max-width: 768px) {
+	.article {
+		padding-bottom: 100px;
+	}
+}
+@media (max-width: 450px) {
+	.article-title h1 {
+		font-size: 32px;
+	}
+}

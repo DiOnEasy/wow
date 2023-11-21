@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="css/quiz.css">
+</head>
+
+<body>
+    <div class="quiz-wrapper">
+
+        <div id="item__0" class="quiz__item">
+            <div class="quiz__title">
+                <p class="quiz__header">QUIZ</p>
+                <p class="quiz__text">Для начала прохождения теста заполните форму</p>
+            </div>
+            <div class="quiz__form">
+                <form id="quiz__telegram" onsubmit="toggleShownBlock(event)" action="">
+                    <input placeholder="Имя" class="quiz__input" name="name" type="text" required>
+                    <input placeholder="Телефон" class="quiz__input" name="phone" type="tel" required>
+                    <input placeholder="Telegram" class="quiz__input" name="telegram" type="text" required>
+                    <button type="submit" class="quiz__form-submit">Отправить</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script>
+        if (document.cookie.indexOf("quizForm") == -1) {
+
+
+            const wrapper = document.querySelector('.quiz-wrapper');
+            let activeTab = 0;
+
+            const data = [
+                {
+                    question: 'Много ли у Вас знакомых девушек',
+                    rightAnswer: 'Да',
+                    wrongAnswer: 'Нет'
+                },
+                {
+                    question: 'Готовы ли Вы привлекать их к работе?',
+                    rightAnswer: 'Да',
+                    wrongAnswer: 'Нет'
+                }, {
+                    question: 'Готовы ли Вы к обучению?',
+                    rightAnswer: 'Да',
+                    wrongAnswer: 'Нет'
+                }, {
+                    question: 'Готовы работать на результат?',
+                    rightAnswer: 'Да',
+                    wrongAnswer: 'Нет'
+                }, {
+                    question: 'Знаете ли Вы что такое OnlyFans?',
+                    rightAnswer: 'Знаю',
+                    wrongAnswer: 'Да, меня такое не интересует!'
+                }, {
+                    question: 'Как Вы относитесь к людям, которые зарабатывают на этом миллионы долларов?',
+                    rightAnswer: 'Хорошо',
+                    wrongAnswer: 'Плохо'
+                }, {
+                    question: 'Готовы ли Вы работать с такими людьями?',
+                    rightAnswer: 'Да',
+                    wrongAnswer: 'Нет'
+                }, {
+                    question: 'На основании опроса, мы выяснили что Вам идеально подходит ваканисия “Скаута”. Это удаленная должность со средней заработной платой в 2000$ / месяц',
+                    rightAnswer: 'Я хочу продолжить',
+                    wrongAnswer: 'Мне это не подходит'
+                }, {
+                    question: 'Вы готовы приступить к обучению?',
+                    rightAnswer: 'Да',
+                    wrongAnswer: 'Нет'
+                },
+            ]
+
+            data.map((item, index) => {
+                wrapper.innerHTML += `<div id="item__${index + 1}" class="quiz__item item__none">
+            <div  class="quiz__title">
+                <p class="quiz__header">QUIZ</p>
+                <p class="quiz__text">${item.question}</p>
+            </div>
+            <div class="quiz__form">
+                <form action="">
+
+                    <button type="button" onclick="toggleShownBlock(event)" class="quiz__button">${item.rightAnswer}</button>
+                    <button type='button' onclick="deniedPage()" class="quiz__button">${item.wrongAnswer}</button>
+
+                </form>
+            </div>
+        </div>`
+            })
+
+            function toggleShownBlock(event) {
+                if (activeTab == 9) {
+                    document.cookie = "quizForm=true; max-age=2592000; path=/";
+
+                    window.location.href = 'pages/model-scout.html'
+                }
+                event.preventDefault()
+                document.querySelector(`#item__${activeTab}`).classList.add('item__none')
+                document.querySelector(`#item__${activeTab + 1}`).classList.remove('item__none')
+                activeTab += 1;
+            }
+
+            function deniedPage() {
+                window.location.href = 'pages/quiz-denied.html'
+            }
+
+            const TOKEN = "6537642931:AAE5yLS0ufYcaGmshynCIwurVwrP6XyVRbc";
+            const CHAT_ID = "-1001990460320";
+            const URI_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
+
+            document
+                .querySelector("#quiz__telegram")
+                .addEventListener("submit", function (e) {
+                    e.preventDefault();
+                    let message = `<b>Форма отправки квиза</b>\n\n`;
+                    message += `<b>Имя:</b>  ${this.name.value}\n`;
+                    message += `<b>Номер телефона:</b> ${this.phone.value}\n`;
+                    message += `<b>Telegram:</b> ${this.telegram.value}\n`;
+                    axios.post(URI_API, {
+                        chat_id: CHAT_ID,
+                        parse_mode: 'html',
+                        text: message
+                    });
+                });
+        }else{
+            window.location.href = 'home.html'
+        }
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
